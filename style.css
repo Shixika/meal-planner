@@ -1,0 +1,50 @@
+body {
+  font-family: Arial;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.tabs button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.expired {
+  background: #ffb3b3;
+}
+
+.soon {
+  background: #ffe0b3;
+}
+
+.ok {
+  background: #b3ffcc;
+}
+
+.recipe {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.planning-day {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}

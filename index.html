@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meal Planner</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+  <h1>🍳 Meal Planner</h1>
+
+  <div class="tabs">
+    <button onclick="showTab('ingredients')">Ingrédients</button>
+    <button onclick="showTab('recipes')">Recettes</button>
+    <button onclick="showTab('planning')">Planning</button>
+  </div>
+
+
+  <div id="ingredients" class="tab">
+
+    <h2>Ajouter ingrédient</h2>
+
+    <input id="ing-name" placeholder="Nom">
+    <input id="ing-qty" type="number" placeholder="Quantité">
+    <input id="ing-date" type="date">
+
+    <button onclick="addIngredient()">Ajouter</button>
+
+    <input id="search-ingredients" placeholder="Recherche..." oninput="renderIngredients()">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Quantité</th>
+          <th>Péremption</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody id="ingredients-list"></tbody>
+
+    </table>
+
+  </div>
+
+
+
+  <div id="recipes" class="tab hidden">
+
+    <h2>Créer recette</h2>
+
+    <input id="recipe-name" placeholder="Nom recette">
+    <button onclick="addRecipe()">Créer</button>
+
+    <input id="search-recipes" placeholder="Recherche..." oninput="renderRecipes()">
+
+    <div id="recipes-list"></div>
+
+  </div>
+
+
+
+  <div id="planning" class="tab hidden">
+
+    <h2>Planning semaine</h2>
+
+    <div id="planning-table"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
